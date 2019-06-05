@@ -1,0 +1,51 @@
+<!--
+Asignacion de datos a columnas por filas
+<tr *ngFor="let person of persons; let i=index;" >
+    &lt;!&ndash;Mostrar Nombre completo &ndash;&gt;
+    <td style="width: 30%">{{ person.Nombres }} {{ person.ApellidoP }} {{ person.ApellidoM }}</td>
+    <td style="text-align:left" >
+        &lt;!&ndash;Mostrar Teléfono &ndash;&gt;
+        <div>
+            {{ person.TelefonoFijo }}
+        </div>
+        &lt;!&ndash;Mostrar extensión en caso de que exista&ndash;&gt;
+        <div *ngIf="person.ExtTelefonoFijo !=''">
+            <strong>Ext.(</strong>{{ person.ExtTelefonoFijo }}<strong>)</strong>
+        </div>
+    </td>
+    &lt;!&ndash;Mostrar celular&ndash;&gt;
+    <td style="text-align:center">{{ person.Celular }}</td>
+    &lt;!&ndash;Mostrar correo electrónico &ndash;&gt;
+    <td style="text-align:left">{{ person.CorreoElectronico }}</td>
+    &lt;!&ndash;Mostrar Nombre de empresa y de sucursal &ndash;&gt;
+    <td  style="text-align:left; width: 30%">
+        <div> <strong>Empresa:</strong> {{ person.NombreEmpresa }}</div>
+        <div> <strong>Sucursal:</strong> {{ person.NombreSucursal }}</div>
+    </td>
+    <td style="width: 10%">
+        &lt;!&ndash;Mostrar botón de estado en caso de que el rol de usuario sea "Administrador"&ndash;&gt;
+        <div *ngIf="NombreUsuario.TipoUsuario != 'Visualizador'">
+            &lt;!&ndash;Si el contacto está dado de alta mostrar botón verde para dar de baja&ndash;&gt;
+            <div  *ngIf="person.Estatus===1" >
+                <button  type="button" class="btn btn-success btn-block" (click)="CSContactos(i);" >Activo</button>
+            </div>
+            &lt;!&ndash;si el contacto está dado de baja mostrar botón rojo para dar de alta &ndash;&gt;
+            <div *ngIf="person.Estatus===0" >
+                <button  type="button" class="btn btn-danger btn-block" (click)="CSContactos(i);" >Inactivo</button>
+            </div>
+        </div>
+        &lt;!&ndash;Mostrar botón para editar en caso de que el rol de usuario sea "Administrador"&ndash;&gt;
+        <div *ngIf="NombreUsuario.TipoUsuario != 'Visualizador' " class="mb-1 mt-1">
+            &lt;!&ndash;Botón para editar&ndash;&gt;
+            <button type="button" class="btn btn-warning btn-block" data-toggle="modal"data-target="#EditarContacto"(click)="tablaIndexContactos(i);" >
+                Editar
+            </button>
+        </div>
+        <div >
+            &lt;!&ndash;Botón para detalles&ndash;&gt;
+            <button type="button" class="btn btn-info btn-block" data-toggle="modal"data-target="#DetallesContacto" (click)="tablaIndexContactos(i);" >
+                Detalles
+            </button>
+        </div>
+    </td>
+</tr>-->

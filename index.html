@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function (){
+            console.log("Document Loaded");
+                document.addEventListener("DOMContentLoaded",getConnection("192.168.1.14"));
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CafeTec</title>
+    <link rel="stylesheet" href="css/ed-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body >
+<!-- Modal -->
+<div class="modal fade" id="modalShow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button id="modalClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modalBody" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal ITEM-->
+<h1 style="text-align: center; color: #343a40;">Ordenes</h1>
+            <!--Datatable contactos -->
+<div class="ed-container colorbg">
+            <table class="table" border="true" id="table">
+                <thead class="thead-dark" style="text-align:center">
+                <!--Columnas de la tabla-->
+                <tr >
+                    <th >Código de Orden</th>
+                    <th >Número de Control</th>
+                    <th >Pedido</th>
+                    <th >Costo Total</th>
+                    <th  >Estado</th>
+                    <th  >Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="tBody" >
+
+                </tbody>
+            </table>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
